@@ -36,6 +36,10 @@ figcaption {
     padding-right: 0;
 }
 
+.div {
+    padding-left: 1%;
+}
+
 @media screen and (max-width: 768px) {
     .desktop {
         display: none;

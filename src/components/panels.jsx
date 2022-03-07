@@ -71,10 +71,10 @@ function Panel() {
                 </Col>
 
                 <h1 className='mobile'>LiveStream</h1>
-                <Col md={6} className="div">
+                <Col md={6}>
                     {
                         !buoy1 && !buoy2 && !buoy3 && !buoy4 ?
-                            <Row>
+                            <Row className="div">
                                 <Col xs={6} className="video">
                                     <img src={require("../assets/water.gif")} width={'100%'}></img>
                                 </Col>
