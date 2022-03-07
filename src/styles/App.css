@@ -1,0 +1,56 @@
+.panel {
+    padding-top: 10%;
+}
+
+.division {
+    margin: 0 2% 0 2%;
+    border: 1px solid black;
+}
+
+#beach {
+    border-right: 1px solid black;
+    position: relative;
+    /* background-image: url("../assets/beach_photo.jpeg"); */
+}
+
+#beach_img {
+    width: 100%;
+}
+
+#videos {
+    margin: 1%;
+    padding: 1%;
+}
+
+#videos > Row {
+    padding: 1%;
+}
+
+.buoy {
+    width: 30px;
+    position: absolute;
+}
+
+#num_1 {
+    left: 30%;
+    top: 30%;
+}
+
+#num_2 {
+    left: 50%;
+    top: 50%;
+}
+
+#num_3 {
+    left: 30%;
+    top: 75%;
+}
+
+#num_4 {
+    left: 70%;
+    top: 60%;
+}
+
+.output_img {
+    width: 100%;
+}
