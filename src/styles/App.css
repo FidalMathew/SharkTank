@@ -1,0 +1,49 @@
+.panel {
+    margin: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.inside {
+    background-color: #FFFFFF;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+figcaption {
+    text-indent: 20%;
+}
+
+.buoy {
+    width: 60%;
+    margin: 20% 40% 0 20%;
+    flex-direction: row;
+}
+
+.beach {
+    display: flex;
+}
+
+.desktop {
+    text-align: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.video {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .inside {
+        padding: 5%;
+    }
+}

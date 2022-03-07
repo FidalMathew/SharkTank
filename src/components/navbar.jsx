@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
 function NavBar() {
+    document.body.style = 'background-color: #A3E7FF;';
     return (
         <div>
-            <Container fluid>
-                <Navbar bg="light" expand="lg">
-                    <Container>
+                <Navbar bg="dark" variant="dark" expand="lg">
+                    <Container fluid>
                         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -25,7 +25,6 @@ function NavBar() {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </Container>
         </div>
     );
 }
