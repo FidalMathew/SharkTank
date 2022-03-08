@@ -1,63 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 .panel {
-    margin: 5%;
-    font-family: 'Roboto', sans-serif;
+  margin: 5%;
+  font-family: "Roboto", sans-serif;
 }
 
 .inside {
-    background-color: #FFFFFF;
-    padding: 2%;
-    border-radius: 20px;
+  background-color: #ffffff;
+  padding: 2%;
+  border-radius: 20px;
+  height: 70vh;
 }
 
 figcaption {
-    background-color: white;
-    text-indent: 30%;
+  text-indent: 30%;
+}
+
+figcaption a {
+  background-color: white;
+  text-indent: 30%;
 }
 
 .buoy {
-    width: 30%;
-    margin: 110% 0% 0 30%;
-    flex-direction: row;
+  width: 30%;
+  filter: contrast(1.75);
+  margin: 110% 0% 0 30%;
+  flex-direction: row;
+  transition: width 2s linear 1s;
 }
 
 .buoy:hover {
-    filter: contrast(1.75);
-    box-shadow: 4px 4px;
-    transition: 0.6s;
+  filter: brightness(200%);
+
+  filter: drop-shadow(0 5px 5px #000000);
 }
 
 .beach {
-    display: flex;
+  display: flex;
 }
 
 .desktop {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .mobile {
-    display: none;
+  display: none;
 }
 
 .video {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.div {
-    padding-left: 1%;
+/* .div {
+  padding-left: 1%;
+} */
+
+.row {
+  margin: 0 !important;
 }
 
+.livestream_content {
+  height: "25rem" !important;
+  background: "black" !important;
+  margin-top: 25px !important;
+}
+/* 
 @media screen and (max-width: 768px) {
-    .desktop {
-        display: none;
-    }
-    .mobile {
-        display: block;
-    }
-    .inside {
-        padding: 5%;
-    }
-}
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .inside {
+    padding: 5%;
+  }
+} */

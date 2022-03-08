@@ -17,104 +17,133 @@ function Panel() {
         let num = (e.target.value);
 
         if (num == 1) {
-            setBouy1(!buoy1);
+            setBouy1(true);
+            setBouy2(false);
+            setBouy3(false);
+            setBouy4(false);
+
         }
         else if (num == 2) {
-            setBouy2(!buoy2);
+            setBouy1(false);
+            setBouy2(true);
+            setBouy3(false);
+            setBouy4(false);
         }
         else if (num == 3) {
-            setBouy3(!buoy3);
+            setBouy1(false);
+            setBouy2(false);
+            setBouy3(true);
+            setBouy4(false);
         }
         else if (num == 4) {
-            setBouy4(!buoy4);
+            setBouy1(false);
+            setBouy2(false);
+            setBouy3(false);
+            setBouy4(true);
         }
 
     }
 
+    const reset = () => {
+        setBouy1(false);
+        setBouy2(false);
+        setBouy3(false);
+        setBouy4(false);
+
+    }
 
     return (
         <div className='panel'>
             <div className="inside">
-            <Container fluid>
-
-                <Row className="desktop">
-                    <Col>
-                        <h1>Buoys</h1>
-                    </Col>
-                    <Col>
-                        <h1>LiveStream</h1>
-                    </Col>
-                </Row>
+                <Container fluid>
+                    <Row>
+                        <Col md={6} className="div">
+                            <h1 style={{ textAlign: "center" }}>Buoys</h1>
+                            <div style={{ backgroundImage: `url(${background})`, height: "25rem", backgroundSize: "140%" }} >
 
 
-            <Row>
-                <h1 className="mobile">Buoys</h1>
-                <Col md={6} style={{ backgroundImage: `url(${background})` }} className="div">
-                    <div className="beach">
-                        <figure>
-                            <input type="image" src={require("../assets/buoy.png")} className="buoy" value={1} onClick={(e) => toggle(e)}></input>
-                            <figcaption className="desc1"><p>Buoy-1</p></figcaption>
-                        </figure>
-                        <figure>
-                            <input type="image" src={require("../assets/buoy.png")} className="buoy" value={2} onClick={(e) => toggle(e)}></input>
-                            <figcaption><p>Buoy-2</p></figcaption>
-                        </figure>
-                        <figure>
-                            <input type="image" src={require("../assets/buoy.png")} className="buoy" value={3} onClick={(e) => toggle(e)}></input>
-                            <figcaption><p>Buoy-3</p></figcaption>
-                        </figure>
-                        <figure>
-                            <input type="image" src={require("../assets/buoy.png")} className="buoy" value={4} onClick={(e) => toggle(e)}></input>
-                            <figcaption><p>Buoy-4</p></figcaption>
-                        </figure>
-                    </div>
-                </Col>
+                                <div className="beach">
+                                    <figure>
+                                        <input type="image" src={require("../assets/buoy.png")} className="buoy" value={1} onClick={(e) => toggle(e)}></input>
+                                        <figcaption className="desc1"><a>Buoy-1</a></figcaption>
+                                    </figure>
+                                    <figure>
+                                        <input type="image" src={require("../assets/buoy.png")} className="buoy" value={2} onClick={(e) => toggle(e)}></input>
+                                        <figcaption><a>Buoy-2</a></figcaption>
+                                    </figure>
+                                    <figure>
+                                        <input type="image" src={require("../assets/buoy.png")} className="buoy" value={3} onClick={(e) => toggle(e)}></input>
+                                        <figcaption><a>Buoy-3</a></figcaption>
+                                    </figure>
+                                    <figure>
+                                        <input type="image" src={require("../assets/buoy.png")} className="buoy" value={4} onClick={(e) => toggle(e)}></input>
+                                        <figcaption><a>Buoy-4</a></figcaption>
+                                    </figure>
+                                </div>
 
-                <h1 className='mobile'>LiveStream</h1>
-                <Col md={6}>
-                    {
-                        !buoy1 && !buoy2 && !buoy3 && !buoy4 ?
-                            <Row className="div">
-                                <Col xs={6} className="video">
-                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                </Col>
-                                <Col xs={6} className="video">
-                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                </Col>
-                                <Col xs={6} className="video">
-                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                </Col>
-                                <Col xs={6} className="video">
-                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                </Col>
+                                <div style={{ textAlign: "center", marginTop: '3em' }}>
+                                    <button className='btn btn-primary ' onClick={reset}>Reset Bouy Cam</button>
+                                </div>
+                            </div>
+                        </Col>
 
-                            </Row>
-                            :
-                            <Row>
+                        <Col md={6}>
+                            <h1 style={{ textAlign: "center" }}>LiveStream</h1>
+
+                            <div className='livestream_content'  >
+
+
                                 {
-                                    buoy1 && <Col  >
-                                        <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                    </Col>
-                                    ||
-                                    buoy2 && <Col  >
-                                        <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                    </Col>
-                                    ||
-                                    buoy3 && <Col  >
-                                        <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                    </Col>
-                                    ||
-                                    buoy4 && <Col  >
-                                        <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                    </Col>
+                                    !buoy1 && !buoy2 && !buoy3 && !buoy4 ?
+                                        <Row >
+                                            <Col xs={6} className="video">
+                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                            </Col>
+                                            <Col xs={6} className="video">
+                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                            </Col>
+                                            <Col xs={6} className="video">
+                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                            </Col>
+                                            <Col xs={6} className="video">
+                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                            </Col>
+                                            <div style={{ textAlign: "center" }}> All Bouys</div>
+
+                                        </Row>
+                                        :
+                                        <Row>
+                                            {
+                                                buoy1 && <Col  >
+                                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                    <div style={{ textAlign: "center" }}>bouy1</div>
+                                                </Col>
+                                                ||
+                                                buoy2 && <Col  >
+                                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                    <div style={{ textAlign: "center" }}>bouy2</div>
+
+                                                </Col>
+                                                ||
+                                                buoy3 && <Col  >
+                                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                    <div style={{ textAlign: "center" }}>bouy3</div>
+                                                </Col>
+                                                ||
+                                                buoy4 && <Col  >
+                                                    <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                    <div style={{ textAlign: "center" }}> bouy4</div>
+                                                </Col>
+                                            }
+                                        </Row>
+
                                 }
-                            </Row>
 
-                    }
 
-                    </Col>
-                </Row>
-            </Container>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </div >
     );

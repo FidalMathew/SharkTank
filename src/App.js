@@ -1,5 +1,7 @@
-import NavBar from './components/navbar';
-import Panel from './components/panels';
+import NavBar from './components/Navbar';
+import Panel from './components/Panels';
+import About from './components/About';
+
 import './styles/App.css';
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Panel />
+      <About />
     </div>
   );
 }
