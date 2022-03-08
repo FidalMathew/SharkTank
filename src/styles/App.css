@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 .panel {
-  margin: 5%;
+  margin: 10%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -9,16 +9,17 @@
   background-color: #ffffff;
   padding: 2%;
   border-radius: 20px;
-  height: 70vh;
 }
 
 figcaption {
-  text-indent: 30%;
+  text-indent: 25%;
 }
 
 figcaption a {
-  background-color: white;
-  text-indent: 30%;
+  background-color: black;
+  color: white !important;
+  text-indent: 35%;
+  padding: 1%;
 }
 
 .buoy {
@@ -64,7 +65,7 @@ figcaption a {
 .livestream_content {
   height: "25rem" !important;
   background: "black" !important;
-  margin-top: 25px !important;
+  /* margin-top: 25px !important; */
 }
 /* 
 @media screen and (max-width: 768px) {
