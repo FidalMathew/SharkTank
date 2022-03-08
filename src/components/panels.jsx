@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/index.css';
-import background from "../assets/beach_photo.jpeg";
+import background from "../assets/beach_photo.png";
 
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -53,7 +53,7 @@ function Panel() {
                     <div className="beach">
                         <figure>
                             <input type="image" src={require("../assets/buoy.png")} className="buoy" value={1} onClick={(e) => toggle(e)}></input>
-                            <figcaption><p>Buoy-1</p></figcaption>
+                            <figcaption className="desc1"><p>Buoy-1</p></figcaption>
                         </figure>
                         <figure>
                             <input type="image" src={require("../assets/buoy.png")} className="buoy" value={2} onClick={(e) => toggle(e)}></input>

@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 .panel {
     margin: 5%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .inside {
@@ -10,13 +12,20 @@
 }
 
 figcaption {
-    text-indent: 20%;
+    background-color: white;
+    text-indent: 30%;
 }
 
 .buoy {
-    width: 60%;
-    margin: 20% 40% 0 20%;
+    width: 30%;
+    margin: 110% 0% 0 30%;
     flex-direction: row;
+}
+
+.buoy:hover {
+    filter: contrast(1.75);
+    box-shadow: 4px 4px;
+    transition: 0.6s;
 }
 
 .beach {
@@ -25,6 +34,7 @@ figcaption {
 
 .desktop {
     text-align: center;
+    font-weight: bold;
 }
 
 .mobile {
