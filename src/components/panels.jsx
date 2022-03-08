@@ -59,7 +59,7 @@ function Panel() {
                     <Row>
                         <Col md={6} className="div">
                             <h1 style={{ textAlign: "center" }}>Buoys</h1>
-                            <div style={{ backgroundImage: `url(${background})`, height: "25rem", backgroundSize: "140%" }} >
+                            <div style={{ backgroundImage: `url(${background})`, height: "25rem", backgroundSize: "120%", backgroundRepeat: `no-repeat` }} >
 
 
                                 <div className="beach">
@@ -81,7 +81,7 @@ function Panel() {
                                     </figure>
                                 </div>
 
-                                <div style={{ textAlign: "center", marginTop: '3em' }}>
+                                <div style={{ textAlign: "center", marginTop: '4em' }}>
                                     <button className='btn btn-primary ' onClick={reset}>Reset Bouy Cam</button>
                                 </div>
                             </div>
@@ -90,49 +90,49 @@ function Panel() {
                         <Col md={6}>
                             <h1 style={{ textAlign: "center" }}>LiveStream</h1>
 
-                            <div className='livestream_content'  >
+                            <div className='livestream_content'  style={{backgroundColor: `black`, padding: `2%`}}>
 
 
                                 {
                                     !buoy1 && !buoy2 && !buoy3 && !buoy4 ?
                                         <Row >
                                             <Col xs={6} className="video">
-                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                <img src={require("../assets/water.gif")} width={'98%'}></img>
                                             </Col>
                                             <Col xs={6} className="video">
-                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                <img src={require("../assets/water.gif")} width={'98%'}></img>
                                             </Col>
                                             <Col xs={6} className="video">
-                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                <img src={require("../assets/water.gif")} width={'98%'}></img>
                                             </Col>
                                             <Col xs={6} className="video">
-                                                <img src={require("../assets/water.gif")} width={'100%'}></img>
+                                                <img src={require("../assets/water.gif")} width={'98%'}></img>
                                             </Col>
-                                            <div style={{ textAlign: "center" }}> All Bouys</div>
+                                            <div style={{ textAlign: "center", color: `white` }}> All Bouys</div>
 
                                         </Row>
                                         :
-                                        <Row>
+                                        <Row style={{paddingTop: `10px`}}>
                                             {
                                                 buoy1 && <Col  >
                                                     <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                                    <div style={{ textAlign: "center" }}>bouy1</div>
+                                                    <div style={{ textAlign: "center", color: `white` }}>bouy1</div>
                                                 </Col>
                                                 ||
                                                 buoy2 && <Col  >
                                                     <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                                    <div style={{ textAlign: "center" }}>bouy2</div>
+                                                    <div style={{ textAlign: "center", color: `white` }}>bouy2</div>
 
                                                 </Col>
                                                 ||
                                                 buoy3 && <Col  >
                                                     <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                                    <div style={{ textAlign: "center" }}>bouy3</div>
+                                                    <div style={{ textAlign: "center", color: `white` }}>bouy3</div>
                                                 </Col>
                                                 ||
                                                 buoy4 && <Col  >
                                                     <img src={require("../assets/water.gif")} width={'100%'}></img>
-                                                    <div style={{ textAlign: "center" }}> bouy4</div>
+                                                    <div style={{ textAlign: "center", color: `white` }}> bouy4</div>
                                                 </Col>
                                             }
                                         </Row>

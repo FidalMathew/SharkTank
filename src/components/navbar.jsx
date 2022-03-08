@@ -6,7 +6,7 @@ function NavBar() {
     document.body.style = 'background-color: #A3E7FF;';
     return (
         <div>
-                <Navbar bg="dark" variant="dark" expand="lg">
+                <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
                     <Container fluid>
                         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
