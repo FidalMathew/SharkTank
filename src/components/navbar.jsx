@@ -9,7 +9,7 @@ function NavBar() {
         <div>
             <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
                 <Container fluid>
-                    <Navbar.Brand href="#home">SIH Website</Navbar.Brand>
+                    <AnchorLink href='#home' offset={() => 150} style={{ textDecoration: "none" }} > <Navbar.Brand href="#home">SIH Website</Navbar.Brand></AnchorLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
