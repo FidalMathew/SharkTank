@@ -14,7 +14,7 @@ function NavBar() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <AnchorLink href='#home' offset={() => 150} style={{ textDecoration: "none" }} ><Nav.Link href="#link">  Home</Nav.Link> </AnchorLink>
-                            <AnchorLink href='#stats' offset={() => 150} style={{ textDecoration: "none" }}><Nav.Link href="#link" >Statistics</Nav.Link></AnchorLink>
+                            <AnchorLink href='#stats' offset={() => 80} style={{ textDecoration: "none" }}><Nav.Link href="#link" >Statistics</Nav.Link></AnchorLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
